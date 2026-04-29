@@ -1,0 +1,9 @@
+"""健康检查测试"""
+
+
+def test_health_ok(client):
+    resp = client.get("/api/v1/health")
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["status"] == "ok"
+    assert data["database"] == "up"

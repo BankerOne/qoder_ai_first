@@ -1,0 +1,45 @@
+# ============ Python ============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# ============ pytest / coverage ============
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+
+# ============ 后端数据 ============
+back_end/app.db
+back_end/test.db
+back_end/uploads/
+back_end/.env
+
+# ============ Node ============
+node_modules/
+dist/
+*.tsbuildinfo
+
+# ============ Vite ============
+.vite/
+front_end/dist/
+
+# ============ IDE ============
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ============ OS ============
+.DS_Store
+Thumbs.db
+
+# ============ Qoder 本地缓存 ============
+.qoder/settings.local.json

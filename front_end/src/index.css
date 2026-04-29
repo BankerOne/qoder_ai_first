@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 主色调：深蓝 - 体现教育行业的专业与权威 */
+    --background: 210 20% 98%;
+    --foreground: 220 20% 15%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+    
+    --primary: 215 80% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 215 80% 55%;
+    --primary-dark: 215 80% 25%;
+    
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 20% 15%;
+    
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 45%;
+    
+    --accent: 45 90% 55%;
+    --accent-foreground: 220 20% 15%;
+    
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 145 65% 40%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 35 90% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 215 80% 35%;
+    
+    --radius: 0.75rem;
+    
+    /* 渐变 */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(215 80% 25%), hsl(215 80% 40%), hsl(225 70% 45%));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(210 20% 99%));
+    
+    /* 阴影 */
+    --shadow-sm: 0 1px 2px hsl(var(--primary) / 0.05);
+    --shadow-md: 0 4px 12px hsl(var(--primary) / 0.08);
+    --shadow-lg: 0 12px 40px hsl(var(--primary) / 0.12);
+    --shadow-elevated: 0 20px 60px hsl(var(--primary) / 0.15);
+    
+    /* 动画 */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 210 20% 95%;
+    
+    --card: 220 20% 10%;
+    --card-foreground: 210 20% 95%;
+    
+    --popover: 220 20% 10%;
+    --popover-foreground: 210 20% 95%;
+    
+    --primary: 215 80% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 215 80% 65%;
+    --primary-dark: 215 80% 45%;
+    
+    --secondary: 215 20% 15%;
+    --secondary-foreground: 210 20% 95%;
+    
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 15% 55%;
+    
+    --accent: 45 90% 55%;
+    --accent-foreground: 220 20% 15%;
+    
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 145 65% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 35 90% 55%;
+    --warning-foreground: 0 0% 100%;
+    
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 215 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .active-press {
+    @apply active:scale-95 transition-transform duration-150;
+  }
+}
