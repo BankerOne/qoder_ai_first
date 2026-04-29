@@ -91,4 +91,4 @@ cd ../my-project
 
 ## License
 
-MIT
+GNU General Public License v3.0 — 详见 [LICENSE](./LICENSE)
